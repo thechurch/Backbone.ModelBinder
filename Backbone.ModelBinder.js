@@ -6,6 +6,12 @@
     if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
         define(['underscore', 'jquery', 'backbone'], factory);
+    } else if (typeof require === 'function') {
+        factory(
+            _ || require('underscore'),
+            jQuery || require('jquery'),
+            Backbone || require('backbone')
+        )
     } else {
         // Browser globals
         factory(_, $, Backbone);
