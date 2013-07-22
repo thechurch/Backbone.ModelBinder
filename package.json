@@ -1,5 +1,5 @@
 {
-  "name": "Backbone.ModelBinder",
+  "name": "backbone-model-binder",
   "version": "1.0.2",
   "description": "Simple, flexible and powerful Model-View binding for Backbone.",
   "author": "Bart Wood",
