@@ -8,9 +8,9 @@
         define(['underscore', 'jquery', 'backbone'], factory);
     } else if (typeof require === 'function') {
         factory(
-            _ || require('underscore'),
-            jQuery || require('jquery'),
-            Backbone || require('backbone')
+            (typeof _ === 'undefined' ? require('underscore') : _),
+            (typeof jQuery === 'undefined' ? require('jquery') : jQuery),
+            (typeof Backbone === 'undefined' ? require('backbone') : Backbone)
         )
     } else {
         // Browser globals
